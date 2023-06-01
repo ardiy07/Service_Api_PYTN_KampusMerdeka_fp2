@@ -1,0 +1,10 @@
+name: reast-api
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - pip
+  - flask
+  - flask-cors
+  - flask-restful
+  - scikit-learn
