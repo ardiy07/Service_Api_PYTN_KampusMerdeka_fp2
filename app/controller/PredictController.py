@@ -25,7 +25,7 @@ def prediction():
         Day = int(request.form['Day'])
 
         data = [Location, MaxTemp, Rainfall, Evaporation, Sunshine, WindGustDir, WindGustSpeed, WindDir9am, WindDir3pm, WindSpeed9am, WindSpeed3pm, Humidity3pm, Pressure9am, Cloud9am, Cloud3pm, RainToday, Year, Month, Day]
-        lr_filename = './app/models/Rain_in_Australia_LR1.pkl'
+        lr_filename = './app/model/Rain_in_Australia_LR1.pkl'
         lr_clf = pickle.load(open(lr_filename, 'rb'))
         pred = lr_clf.predict([data])
         if pred == 0:
